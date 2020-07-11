@@ -5,7 +5,9 @@
 # Установка
 
 git clone git@github.com:podyakov/ffin-fe-test.git
+
 cd ffin-fe-test
+
 npm install
 
 ## Development server
