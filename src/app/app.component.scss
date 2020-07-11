@@ -1,0 +1,12 @@
+.panel {
+  border: 1px solid gray;
+  padding: 4px;
+  margin: 4px;
+
+  &__button {
+    margin-right: 8px;
+    padding: 4px;
+    background-color: #eee;
+    cursor: pointer;
+  }
+}

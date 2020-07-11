@@ -1,0 +1,49 @@
+<p>document works!</p>
+
+<ng-container *ngIf="!isLoading && !submitted">
+
+  <div class="document">
+    <h1>{{ document.title }}</h1>
+    <p> {{ document.content }}</p>
+  </div>
+
+  <ng-container *ngIf="!submitted">
+    <form [formGroup]="form">
+      <div class="form__field">
+        Resolution:
+        <select
+          [formGroup]="form"
+          [formControlName]="'resolution'"
+        >
+          <option
+            *ngFor="let item of resolutionSelect"
+            [ngValue]="item.value"
+          >{{item.label}}</option>
+        </select>
+      </div>
+      <div class="form__field">
+        Comment:
+        <input
+          type="text"
+
+          [formGroup]="form"
+          [formControlName]="'comment'"
+        >
+      </div>
+
+      <div class="form__buttons">
+        <button (click)="setState(DOCUMENT_STATES.ACCEPT)">{{ stateTranslations[DOCUMENT_STATES.ACCEPT] }}</button>
+        |
+        <button (click)="setState(DOCUMENT_STATES.REJECT)">{{ stateTranslations[DOCUMENT_STATES.REJECT] }}</button>
+      </div>
+    </form>
+  </ng-container>
+
+</ng-container>
+
+<ng-container *ngIf="!isLoading && submitted">
+
+  {{ result | json }}
+
+
+</ng-container>

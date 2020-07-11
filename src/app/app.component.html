@@ -1,0 +1,23 @@
+<h1><a routerLink="/">FFIN-FE-TEST</a></h1>
+
+<div class="panel">
+  <span
+    *ngIf="!($authorized | async)"
+    routerLink="auth"
+    class="panel__button">
+    AUTH
+  </span>
+  <span
+    *ngIf="($authorized | async)"
+    [routerLink]="'logout'"
+    class="panel__button">
+    LOGOUT
+  </span>
+  <span
+    routerLink="document"
+    class="panel__button">
+    MY DOCUMENT
+  </span>
+</div>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,33 @@
+<p>auth works!</p>
+
+<form
+  [formGroup]="form"
+  (ngSubmit)="submit()">
+
+  <div class="form__field">
+    Login:
+    <input
+      type="text"
+      [formGroup]="form"
+      [formControlName]="'login'"
+    >
+  </div>
+
+  <div class="form__field">
+    Password:
+    <input
+      type="password"
+      [formGroup]="form"
+      [formControlName]="'password'"
+    >
+  </div>
+  <div class="form__buttons">
+    <button
+      [disabled]="!form.valid"
+      type="submit"
+    >
+      Submit
+    </button>
+  </div>
+
+</form>
