@@ -1,8 +1,6 @@
 .form__field {
   margin: 4px;
   padding: 4px;
-  border: 1px solid gray;
-
 }
 
 .form__buttons {
@@ -13,4 +11,11 @@
   margin: 16px;
   padding: 16px;
   border: 1px solid green;
+}
+
+code {
+  display: block;
+  margin: 16px;
+  padding: 16px;
+  border: 1px solid blue;
 }

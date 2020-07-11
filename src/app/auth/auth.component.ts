@@ -27,7 +27,7 @@ export class AuthComponent implements OnInit {
     const subscription = this.authService.login(this.form.value.login, this.form.value.password)
       .subscribe(result => {
         if (result) {
-          this.router.navigate(['document']);
+          this.router.navigate(['']);
         } else {
           console.error('invalid login');
         }

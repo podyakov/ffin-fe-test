@@ -67,12 +67,12 @@ export class DocumentComponent implements OnInit {
       comment: this.form.value.comment
     }
 
-    debugger;
-
-    const subscription = this.documentService.setDocumentState(this.documentId, documentState)
+    const subscription = this.documentService
+      .setDocumentState(this.documentId, documentState)
       .subscribe(res => {
         this.result = res;
         this.submitted = true;
+
         subscription.unsubscribe();
       })
   }
